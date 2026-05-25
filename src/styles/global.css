@@ -1,0 +1,111 @@
+/* styles/global.css */
+/* Import Google Fonts - Syne for headings, Manrope for body */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Manrope:wght@300;400;500;600&display=swap');
+
+/* ─── CSS Variables (Light Theme) ─────────────────────────────── */
+:root {
+  --bg-primary: #f5f3ef;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-input: #f0ede8;
+
+  --text-primary: #1a1814;
+  --text-secondary: #6b6560;
+  --text-muted: #a09890;
+
+  --accent: #e85d26;
+  --accent-hover: #cf4f1e;
+  --accent-light: #fce8df;
+
+  --success: #2d9c6e;
+  --success-light: #d4f0e5;
+
+  --warning: #e8a020;
+  --warning-light: #fef3d6;
+
+  --danger: #d63b3b;
+  --danger-light: #fde8e8;
+
+  --border: #e5e0d8;
+  --border-focus: #e85d26;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+
+  --transition: 0.2s ease;
+}
+
+/* ─── Dark Theme ───────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --bg-primary: #131210;
+  --bg-secondary: #1e1c19;
+  --bg-card: #242220;
+  --bg-input: #2c2a27;
+
+  --text-primary: #f0ece5;
+  --text-secondary: #9e998f;
+  --text-muted: #6b6560;
+
+  --accent: #f07040;
+  --accent-hover: #e85d26;
+  --accent-light: #2e1e15;
+
+  --success: #3ab87e;
+  --success-light: #152b20;
+
+  --warning: #f0b030;
+  --warning-light: #2a2010;
+
+  --danger: #e05050;
+  --danger-light: #2b1515;
+
+  --border: #2e2c28;
+  --border-focus: #f07040;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+/* ─── Reset & Base ─────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* ─── Scrollbar Styling ────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* ─── Utility ──────────────────────────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
