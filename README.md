@@ -40,6 +40,9 @@ This application helps users manage daily tasks efficiently with features like a
 
 # 📂 Project Structure
 
+# 📂 Project Structure
+
+```text
 todo-app/
 │
 ├── src/
@@ -65,6 +68,7 @@ todo-app/
 │   └── package.json
 │
 └── README.md
+```
 
 ---
 
